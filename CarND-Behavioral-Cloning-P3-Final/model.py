@@ -142,7 +142,7 @@ if __name__ == "__main__":
     parser.add_argument('--driving_file_log', default='/driving_log.csv', help='Driving log file')
     parser.add_argument('--image_dir', default='/IMG/', help='Training images')
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
-    parser.add_argument('--epoch', type=int, default=3, help='Number of epochs')
+    parser.add_argument('--epoch', type=int, default=12, help='Number of epochs')
     parser.add_argument('--lrate', type=float, default=.0001, help='Learning rate')
     parser.add_argument('--destfile', type=str, default='model.h5', help='Persisted model file ')
     args = parser.parse_args()
