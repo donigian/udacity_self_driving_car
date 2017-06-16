@@ -217,7 +217,7 @@ video_clip.write_videofile(video_output, audio=False)
 ```
 
 
-Here's a [link](https://youtu.be/yKPQqk_v3zc) to the video
+Here's a [link](https://youtu.be/2TgMffSzuMU) to the video
 
 
 ```python
@@ -234,4 +234,14 @@ HTML("""
 </video>
 
 
+## Discussion:
+### Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
+
+
+
+This project required alot of experimentation for the various parameters (see above) inorder to detect the lane more robustly. 
+
+One of the limitations of the current pipeline is it's inability to deal well with changing light conditions. For example, the second and third challenge videos contain different brightless levels for the lane (trees, different color of concrete etc) which make it challenging for the algorithm. Additionally, real life poses challenges such as rain, snow, and shadows from buildings which impact the amount of shade in the image. More advanced filtering and brightness equalization techniques have to be considered for better detection.
+
+Another improvement I can make in the future is to keep track of the last several detections of the lane lines and curvatures which can then be used to treat new detections. This can be implemented using a class for Line to track all important parameters measured between frames.
 
